@@ -23,16 +23,17 @@ class mcfedrMemcachedExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        foreach($config['connections'] as $name => $connection)
-        {
-            $container->setDefinition("mcfedr_memcached.$name", new Definition('Memcached', [
-                'factory' => 'mcfedr\MemcachedBundle\Factory\MemcachedFactory',
-                'factory_method' => 'get',
-                'arguments' => [
+        foreach ($config['connections'] as $name => $connection) {
+            $def = new Definition(
+                'Memcached', [
                     $connection['servers'],
                     isset($connection['persistent_id']) ? $connection['persistent_id'] : null
                 ]
-            ]));
+            );
+
+            $def->setFactoryClass('mcfedr\MemcachedBundle\Factory\MemcachedFactory');
+            $def->setFactoryMethod('get');
+            $container->setDefinition("mcfedr_memcached.$name", $def);
         }
     }
 }
