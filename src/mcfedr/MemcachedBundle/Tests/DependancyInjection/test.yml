@@ -1,0 +1,15 @@
+mcfedr_memcached:
+    connections:
+        main:
+            persistent_id: main
+            servers:
+                - host: 127.0.0.1
+                  port: 11211
+        other:
+            servers:
+                - host: 10.0.0.10
+                  port: 11211
+                - host: 10.0.0.11
+                  port: 11211
+                - host: 10.0.0.12
+                  port: 11211
