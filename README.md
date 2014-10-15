@@ -42,4 +42,3 @@ So in the example there are two services:
 
 1. `mcfedr_memcached.main`
 1. `mcfedr_memcached.other`
-
