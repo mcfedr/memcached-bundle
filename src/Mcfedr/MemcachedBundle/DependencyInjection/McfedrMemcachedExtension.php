@@ -1,6 +1,6 @@
 <?php
 
-namespace mcfedr\MemcachedBundle\DependencyInjection;
+namespace Mcfedr\MemcachedBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -13,7 +13,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class mcfedrMemcachedExtension extends Extension
+class McfedrMemcachedExtension extends Extension
 {
     /**
      * {@inheritDoc}
@@ -31,7 +31,7 @@ class mcfedrMemcachedExtension extends Extension
                 ]
             );
 
-            $def->setFactoryClass('mcfedr\MemcachedBundle\Factory\MemcachedFactory');
+            $def->setFactoryClass('Mcfedr\MemcachedBundle\Factory\MemcachedFactory');
             $def->setFactoryMethod('get');
             $container->setDefinition("mcfedr_memcached.$name", $def);
         }

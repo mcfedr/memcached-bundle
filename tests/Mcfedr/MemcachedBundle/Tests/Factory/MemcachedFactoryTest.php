@@ -3,9 +3,9 @@
  * Created by mcfedr on 23/05/2014 11:09
  */
 
-namespace mcfedr\MemcachedBundle\Tests\Factory;
+namespace Mcfedr\MemcachedBundle\Tests\Factory;
 
-use mcfedr\MemcachedBundle\Factory\MemcachedFactory;
+use Mcfedr\MemcachedBundle\Factory\MemcachedFactory;
 
 class MemcachedFactoryTest extends \PHPUnit_Framework_TestCase
 {
@@ -111,4 +111,4 @@ class MemcachedFactoryTest extends \PHPUnit_Framework_TestCase
 
         $this->assertCount(0, $memcached2->getServerList());
     }
-} 
+}

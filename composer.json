@@ -1,20 +1,34 @@
 {
     "name": "mcfedr/memcached-bundle",
-    "license": "MIT",
     "type": "symfony-bundle",
     "description": "The smallest, simplest memcached bundle",
-    "autoload": {
-        "psr-0": { "": "src/" }
-    },
+    "keywords": ["memcached", "memcache", "symfony", "session"],
     "require": {
         "php": ">=5.4",
         "symfony/symfony": "~2.4",
         "ext-memcached": "*"
     },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fred Cox",
+            "email": "mcfedr@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
     "require-dev": {
-        "phpunit/phpunit": "~4.1"
+        "phpunit/phpunit": "~4.1",
+        "theseer/phpdox": "~0.7",
+        "phploc/phploc": "~2.0",
+        "pdepend/pdepend": "~2.0",
+        "phpmd/phpmd": "~2.1",
+        "squizlabs/php_codesniffer": "~1.5",
+        "sebastian/phpcpd": "~2.0"
     },
-    "config": {
-        "bin-dir": "bin"
+    "autoload": {
+        "psr-4": { "Mcfedr\\MemcachedBundle\\": "src/Mcfedr/MemcachedBundle" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Mcfedr\\MemcachedBundle\\": "src/Mcfedr/MemcachedBundle" }
     }
 }

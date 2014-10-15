@@ -2,13 +2,17 @@
 
 This is going to be the simplest bundle you have ever seen for memcached
 
+[![Latest Stable Version](https://poser.pugx.org/mcfedr/memcached-bundle/v/stable.png)](https://packagist.org/packages/mcfedr/memcached-bundle)
+[![License](https://poser.pugx.org/mcfedr/memcached-bundle/license.png)](https://packagist.org/packages/mcfedr/memcached-bundle)
+[![Build Status](https://travis-ci.org/mcfedr/memcached-bundle.svg?branch=master)](https://travis-ci.org/mcfedr/memcached-bundle)
+
 ## Install
 
 * `composer require mcfedr/memcached-bundle`
 
 * Update your Kernel
 
-    `new mcfedr\MemcachedBundle\mcfedrMemcachedBundle()`
+    `new Mcfedr\MemcachedBundle\McfedrMemcachedBundle()`
 
 ## Configuration
 

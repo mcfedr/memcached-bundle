@@ -3,7 +3,7 @@
  * Created by mcfedr on 23/05/2014 10:47
  */
 
-namespace mcfedr\MemcachedBundle\Factory;
+namespace Mcfedr\MemcachedBundle\Factory;
 
 class MemcachedFactory
 {
