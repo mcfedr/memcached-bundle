@@ -5,6 +5,7 @@ This is going to be the simplest bundle you have ever seen for memcached
 [![Latest Stable Version](https://poser.pugx.org/mcfedr/memcached-bundle/v/stable.png)](https://packagist.org/packages/mcfedr/memcached-bundle)
 [![License](https://poser.pugx.org/mcfedr/memcached-bundle/license.png)](https://packagist.org/packages/mcfedr/memcached-bundle)
 [![Build Status](https://travis-ci.org/mcfedr/memcached-bundle.svg?branch=master)](https://travis-ci.org/mcfedr/memcached-bundle)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/12ae7a3f-afd2-44be-9745-2bb9d015cfe1/mini.png)](https://insight.sensiolabs.com/projects/12ae7a3f-afd2-44be-9745-2bb9d015cfe1)
 
 ## Install
 
