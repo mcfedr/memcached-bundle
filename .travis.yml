@@ -4,12 +4,11 @@ php:
     - 5.6
     - 5.5
     - 5.4
-    - hhvm
-    - 7
+#    - hhvm
+#    - 7
 
 before_script:
-    - sh -c 'if [ "$TRAVIS_PHP_VERSION" != "7" ]; then echo "extension = memcached.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini; fi;'
-    - sh -c 'if [ "$TRAVIS_PHP_VERSION" = "7" ]; then pecl install memcached; fi;'
+    - echo "extension = memcached.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
     - composer selfupdate
     - composer install --prefer-source
 
