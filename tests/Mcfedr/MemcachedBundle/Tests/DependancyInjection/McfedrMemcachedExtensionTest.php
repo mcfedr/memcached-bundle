@@ -26,7 +26,7 @@ class McfedrMemcachedExtensionTest extends \PHPUnit_Framework_TestCase
 
     public function testService()
     {
-        $this->assertInstanceOf('Memcached', $this->container->get('mcfedr_memcached.main'));
+        $this->assertInstanceOf(\Memcached::class, $this->container->get('mcfedr_memcached.main'));
     }
 
     public function testServicePersistent()

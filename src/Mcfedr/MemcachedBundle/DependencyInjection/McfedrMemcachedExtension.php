@@ -2,6 +2,7 @@
 
 namespace Mcfedr\MemcachedBundle\DependencyInjection;
 
+use Mcfedr\MemcachedBundle\Factory\MemcachedFactory;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
@@ -23,14 +24,13 @@ class McfedrMemcachedExtension extends Extension
 
         foreach ($config['connections'] as $name => $connection) {
             $def = new Definition(
-                'Memcached', [
+                \Memcached::class, [
                     $connection['servers'],
                     isset($connection['persistent_id']) ? $connection['persistent_id'] : null
                 ]
             );
 
-            $def->setFactoryClass('Mcfedr\MemcachedBundle\Factory\MemcachedFactory');
-            $def->setFactoryMethod('get');
+            $def->setFactory([MemcachedFactory::class, 'get']);
             $container->setDefinition("mcfedr_memcached.$name", $def);
         }
     }
